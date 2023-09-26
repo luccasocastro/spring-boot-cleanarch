@@ -1,5 +1,10 @@
 package com.luxkapotter.springbootcleanarch.infrastructure.controllers;
 
-public record CreateUserRequest(String username, String password, String email) {
+import jakarta.validation.constraints.NotBlank;
+
+public record CreateUserRequest(
+    @NotBlank String username, 
+    @NotBlank String password, 
+    @NotBlank String email) {
     
 }

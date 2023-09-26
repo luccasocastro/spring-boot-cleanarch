@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.luxkapotter.springbootcleanarch.application.usecases.CreateUserInteractor;
 import com.luxkapotter.springbootcleanarch.domain.entity.User;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -21,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping
-    CreateUserResponse create(@RequestBody CreateUserRequest request){
+    CreateUserResponse create(@Valid @RequestBody CreateUserRequest request){
         User userBusinessObj = userDTOMapper.toUser(request);
         User user = createUserInteractor.createUser(userBusinessObj);
         return userDTOMapper.toResponse(user);
