@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
- <img src="https://img.shields.io/static/v1?label=Tipo&message=Desafio&color=8257E5&labelColor=000000" alt="Desafio" />
+ <img src="https://img.shields.io/badge/Tipo-Aprendizado-blue" alt="Aprendizado" />
 </p>
 
 API de cadastro de usuários utilizando Clean Architecture
@@ -43,56 +43,15 @@ O Swagger poderá ser visualizado em [localhost:8080/swagger-ui.html](http://loc
 
 ## API Endpoints
 
-Para fazer as requisições HTTP abaixo, foi utilizada a ferramenta [httpie](https://httpie.io):
+Para fazer a requisição HTTP abaixo, foi utilizada a ferramenta [httpie](https://httpie.io):
 
-- Criar Tarefa 
+- Criar Usuário 
 ```
-$ http POST :8080/todos nome="Todo 1" descricao="Desc Todo 1" prioridade=1
+$ http POST :8080/users username="User 1" password="12345678" email="user@mail.com"
 
-[
-  {
-    "descricao": "Desc Todo 1",
-    "id": 1,
-    "nome": "Todo 1",
-    "prioridade": 1,
-    "realizado": false
-  }
-]
-```
+{
+    "email": "user@mail.com",
+    "username": "User 1"
+}
 
-- Listar Tarefas
-```
-$ http GET :8080/todos
-
-[
-  {
-    "descricao": "Desc Todo 1",
-    "id": 1,
-    "nome": "Todo 1",
-    "prioridade": 1,
-    "realizado": false
-  }
-]
-```
-
-- Atualizar Tarefa
-```
-$ http PUT :8080/todos/1 nome="Todo 1 Up" descricao="Desc Todo 1 Up" prioridade=2
-
-[
-  {
-    "descricao": "Desc Todo 1 Up",
-    "id": 1,
-    "nome": "Todo 1 Up",
-    "prioridade": 2,
-    "realizado": false
-  }
-]
-```
-
-- Remover Tarefa
-```
-http DELETE :8080/todos/1
-
-[ ]
 ```
