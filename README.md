@@ -1,12 +1,12 @@
 <h1 align="center">
-  TODO List
+  SpringBoot Clean Arch
 </h1>
 
 <p align="center">
  <img src="https://img.shields.io/badge/Tipo-Aprendizado-blue" alt="Aprendizado" />
 </p>
 
-API de cadastro de usuários utilizando Clean Architecture
+Aprendendo a implementar conceitos de Clean Architecture com Java e SpringBoot
 
 ## Tecnologias
  
@@ -25,6 +25,7 @@ API de cadastro de usuários utilizando Clean Architecture
 - Injeção de Dependências
 - Tratamento de respostas de erro
 - Geração automática do Swagger com a OpenAPI 3
+- Testes Unitários
 
 ## Como Executar
 
